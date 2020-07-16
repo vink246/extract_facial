@@ -1,7 +1,7 @@
 # extract_face
 Extract facial features such as the eyes and mouth from MTCNN's predictions and find whether eyes or mouths are closed/open.
 ## Installation
-To use, add the extract_face folder to your Python path. The following dependencies are required: opencv, imutils, and time
+To use, add the extract_face folder to your Python path. The following dependencies are required: opencv, imutils, numpy, and time
 ## Functions
 extract_face has four functions: extractRoi, getEyeOpenClose, getEyeOpenCloseIris, and getMouthOpenClose.
 ## extractRoi
