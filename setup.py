@@ -14,5 +14,5 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
     ],
     python_requires='>=3.5',
-    install_requires= ["opencv", "imutils", "numpy"]
+    install_requires= ["opencv-python", "imutils", "numpy"]
 )
