@@ -9,6 +9,7 @@ setuptools.setup(
     packages=["extract_face"],
     include_package_data=True,
     url = "https://github.com/vink246/extract_face.git",
+    download_url = "https://github.com/vink246/extract_face/archive/v0.0.1-alpha.tar.gz",
     classifiers=[
         "Programming Language :: Python :: 3",
     ],
