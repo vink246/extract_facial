@@ -7,7 +7,8 @@ extract_facial has four functions: extractRoi, getEyeOpenClose, getEyeOpenCloseI
 ## extractRoi
 exctractRoi takes in the input image, the results from the MTCNN detector, and a resize factor as its arguments. It outputs a dictionary containing the resized regions of interest (ROI) of the face, left eye, right eye, and mouth, as well as a dictionary containing coordinates to bound all those regions.
 ### Syntax
-`extractedRois, extractedCoords = extract_face.extractRoi(img, detections, resize_factor)` 
+```python 
+extractedRois, extractedCoords = extract_face.extractRoi(img, detections, resize_factor)```
 ### Usage
 ```python
 import cv2
