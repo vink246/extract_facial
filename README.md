@@ -25,4 +25,4 @@ extractedRois, extractedCoords = extract_facial.extractRoi(img, results, 250)
 
 ## Contributing and Local Development
 Please check the [CONTRIBUTING](/CONTRIBUTING.md) guidelines for information 
-on how to contribute to docrunner.
+on how to contribute to extract_facial.
