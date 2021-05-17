@@ -1,4 +1,6 @@
-from extract_facial.getEyeOpenClose import getEyeOpenClose
-from extract_facial.getEyeOpenCloseIris import getEyeOpenCloseIris
-from extract_facial.getMouthOpenClose import getMouthOpenClose
-from extract_facial.extractRoi import extractRoi
+__version__ = '0.1.0'
+
+from .getEyeOpenClose import getEyeOpenClose
+from .getEyeOpenCloseIris import getEyeOpenCloseIris
+from .getMouthOpenClose import getMouthOpenClose
+from .extractRoi import extractRoi
