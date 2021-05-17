@@ -22,3 +22,7 @@ img = cv2.imread('person.jpg')
 results = detector.detect_faces(img)
 extractedRois, extractedCoords = extract_facial.extractRoi(img, results, 250)
 ```
+
+## Contributing and Local Development
+Please check the [CONTRIBUTING](/CONTRIBUTING.md) guidelines for information 
+on how to contribute to docrunner.

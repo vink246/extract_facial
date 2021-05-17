@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "extract_facial"
+license = "GPL-3.0-only"
+version = "0.1.0"
+description = "Extract facial features in Python such as the eyes and mouth from MTCNN's predictions and find whether eyes or mouths are closed/open."
+authors = ["vink246 <2vineetk@gmail.com>"]
+homepage = "https://github.com/vink246/extract_facial"
+repository = "https://github.com/vink246/extract_facial"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.6,<4.0"
+opencv-python = "^4.5.2"
+imutils = "^0.5.4"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
