@@ -1,1 +1,16 @@
-site_name: My Docs
+site_name: Extract Facial
+
+theme:
+  name: material
+
+repo_name: vink246/extract_facial
+repo_url: https://github.com/vink246
+edit_uri: ""
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Introduction: 'index.md'
+  - Functions: 'functions.md'
