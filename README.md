@@ -13,14 +13,11 @@ extractedRois, extractedCoords = extract_face.extractRoi(img, detections, resize
 ### Usage
 ```python
 import cv2
-from mtcnn.mtcnn import MTCNN
 import extract_facial
-
-detector = MTCNN()
 
 img = cv2.imread('person.jpg')
 results = detector.detect_faces(img)
-extractedRois, extractedCoords = extract_facial.extractRoi(img, results, 250)
+extractedRois, extractedCoords = extract_facial.extractRoi(img, 250)
 ```
 
 ## Contributing and Local Development
