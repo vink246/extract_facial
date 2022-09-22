@@ -3,7 +3,10 @@ Extract facial features such as the eyes and mouth from MTCNN's predictions and 
 
 ## Installation
 
-To use, add the extract_facial folder to your Python path. The following dependencies are required: opencv, imutils, and numpy.
+extract_facial can be installed using the pip package manager:
+```
+pip install extract_facial
+```
 
 ## Basic Usage
 
