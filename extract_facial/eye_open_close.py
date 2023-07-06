@@ -1,20 +1,20 @@
 import cv2
-import numpy as np
 import imutils
+import numpy as np
 
 
-def getEyeOpenClose(eye_frame):
+def get_eye_open_close(eye_frame: np.ndarray):
     eye_open = False
 
     # check to see if input image exists
     if eye_frame is not None:
         # make a copy of input image/frame and rescale
-        clone_eye = eye_frame.copy()
+        clone_eye: np.ndarray = eye_frame.copy()
         clone_eye = imutils.resize(clone_eye, width=250, inter=cv2.INTER_CUBIC)
 
         # convert to grayscale and increase contrast
         gray_eye_frame = cv2.cvtColor(clone_eye, cv2.COLOR_BGR2GRAY)
-        gray_eye_frame = cv2.convertScaleAbs(gray_eye_frame, alpha=2, beta=-30)
+        gray_eye_frame: np.ndarray = cv2.convertScaleAbs(gray_eye_frame, alpha=2, beta=-30)
 
         # calculate median brightness of eye_frame
         median = np.median(gray_eye_frame)
@@ -35,7 +35,7 @@ def getEyeOpenClose(eye_frame):
         mask = cv2.GaussianBlur(mask, (5, 5), cv2.BORDER_DEFAULT)
 
         # find contours over mask
-        contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+        contours, _hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
         # filter unwanted contours
         good = []
@@ -51,7 +51,7 @@ def getEyeOpenClose(eye_frame):
             c += 1
 
         # draw contours
-        cont = cv2.drawContours(clone_eye, good, -1, (0, 0, 255), 2)
+        cv2.drawContours(clone_eye, good, -1, (0, 0, 255), 2)
 
         # check to see if appropriate contour is present
         if len(good) > 0:

@@ -1,25 +1,29 @@
+from typing import Literal, Tuple, Union
+
 import cv2
-import numpy as np
 import imutils
+import numpy as np
 
 
-def getMouthOpenClose(mouth_frame):
+def get_mouth_open_close(
+    mouth_frame: np.ndarray,
+) -> Union[Tuple[bool, np.ndarray], Tuple[Literal[False], None]]:
     mouth_open = False
 
     # check to see if input image exists
     if mouth_frame is not None:
         # make a copy of input image/frame and rescale
-        clone_mouth = mouth_frame.copy()
+        clone_mouth: np.ndarray = mouth_frame.copy()
         clone_mouth = imutils.resize(clone_mouth, width=250, inter=cv2.INTER_CUBIC)
 
         # convert to grayscale
-        gray_mouth_frame = cv2.cvtColor(clone_mouth, cv2.COLOR_BGR2GRAY)
+        gray_mouth_frame: np.ndarray = cv2.cvtColor(clone_mouth, cv2.COLOR_BGR2GRAY)
 
         # calculate median brightness of mouth_frame
         median = np.median(gray_mouth_frame)
 
         # convert mouth_frame to hsv
-        hsv = cv2.cvtColor(clone_mouth, cv2.COLOR_BGR2HSV)
+        hsv: np.ndarray = cv2.cvtColor(clone_mouth, cv2.COLOR_BGR2HSV)
 
         # define adaptive 'value' threshold
         ubv = int((median * 0.38) + 5)

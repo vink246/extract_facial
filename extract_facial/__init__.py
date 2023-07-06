@@ -1,6 +1,6 @@
 __version__ = '0.1.0'
 
-from .getEyeOpenClose import getEyeOpenClose
-from .getEyeOpenCloseIris import getEyeOpenCloseIris
-from .getMouthOpenClose import getMouthOpenClose
-from .extractRoi import extractRoi
+from .eye_open_close import get_eye_open_close
+from .eye_open_close_iris import get_eye_open_close_iris
+from .mouth_open_close import get_mouth_open_close
+from .roi import extract_roi
